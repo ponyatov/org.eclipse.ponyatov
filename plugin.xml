@@ -5,9 +5,11 @@
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            name="Perspective"
+            name="Ponyatov"
             class="org.eclipse.ponyatov.Perspective"
-            id="org.eclipse.ponyatov.perspective">
+            id="org.eclipse.ponyatov.perspective"
+            icon="icons/alt_window_16.gif"
+            >
       </perspective>
    </extension>
 
