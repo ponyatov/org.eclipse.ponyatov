@@ -11,5 +11,26 @@
             name="Ponyatov">
       </perspective>
    </extension>
+   
+   <extension
+   		point="org.eclipse.core.resources.natures"
+   		id="org.eclipse.ponyatov.makeproject"
+   		name="Ponyatov's Makefile project"
+   		>
+   		<runtime>
+   			<run class="org.eclipse.ponyatov.MakeNature"/>
+   		</runtime>
+   		<builder id="org.eclipse.ponyatov.make"/> 
+   </extension>
+   
+   <extension
+   		point="org.eclipse.core.resources.builders"
+   		id="org.eclipse.ponyatov.make"
+   		name="MAKE"
+   		>
+   		<builder hasNature="true">
+   			<run class="org.eclipse.ponyatov.MakeBuilder"/>
+   		</builder>
+   </extension>
 
 </plugin>
