@@ -26,14 +26,17 @@ public class Perspective implements IPerspectiveFactory {
 		layout.addShowViewShortcut(IPageLayout.ID_OUTLINE);
 		layout.addShowViewShortcut(IPageLayout.ID_PROP_SHEET);
 		layout.addShowViewShortcut(IPageLayout.ID_TASK_LIST);
+		layout.addShowViewShortcut(IPageLayout.ID_PROBLEM_VIEW);
 	}
 
 	public void defineLayout(IPageLayout layout) {
 		String editorArea = layout.getEditorArea();
 		IFolderLayout left = layout.createFolder("left", IPageLayout.LEFT, (float) 0.2, editorArea);
-		IFolderLayout right = layout.createFolder("right", IPageLayout.RIGHT, (float) 0.7, editorArea);
+		IFolderLayout right = layout.createFolder("right", IPageLayout.RIGHT, (float) 0.75, editorArea);
+		IFolderLayout bottom = layout.createFolder("bottom", IPageLayout.BOTTOM, (float) 0.7, editorArea);
 		left.addView(IPageLayout.ID_PROJECT_EXPLORER);
 		right.addView(IPageLayout.ID_OUTLINE);
+		bottom.addView(IPageLayout.ID_PROBLEM_VIEW);
 	}
 
 }
