@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.ponyatov;singleton:=true
 Bundle-Version: 0.0.1.alpha
 Bundle-Activator: org.eclipse.ponyatov.Activator
 Bundle-Vendor: Dmitry Ponyatov <dponyatov@gmail.com>
-Require-Bundle: org.eclipse.ui, org.eclipse.core.runtime
+Require-Bundle: org.eclipse.core.runtime, org.eclipse.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.ponyatov
