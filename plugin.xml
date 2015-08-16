@@ -14,19 +14,19 @@
    
    <extension
    		point="org.eclipse.core.resources.natures"
-   		id="org.eclipse.ponyatov.makeproject"
+   		id="org.eclipse.ponyatov.makenature"
    		name="Ponyatov's Makefile project"
    		>
+   		<builder id="org.eclipse.ponyatov.make"/> 
    		<runtime>
    			<run class="org.eclipse.ponyatov.MakeNature"/>
    		</runtime>
-   		<builder id="org.eclipse.ponyatov.make"/> 
    </extension>
    
    <extension
    		point="org.eclipse.core.resources.builders"
-   		id="org.eclipse.ponyatov.make"
-   		name="MAKE"
+   		id="org.eclipse.ponyatov.makebuilder"
+   		name="MakeBuilder"
    		>
    		<builder hasNature="true">
    			<run class="org.eclipse.ponyatov.MakeBuilder"/>
