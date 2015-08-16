@@ -41,9 +41,16 @@
    		name="Makefile builder"
    		>
    		<builder hasNature="true">
-   			<run class="org.eclipse.ponyatov.MakeBuilder"/>
+   			<run class="org.eclipse.ponyatov.MakeBuilder">
+   				<!--parameter name="optimize" value="true"/-->
+   			</run>
    		</builder>
    </extension>
+   
+   <!--extension point="org.eclipse.ui.commands">
+ 		<command id="org.eclipse.ponyatov.MakeBuilder.add" name="Add Makefile builder"/> 
+ 		<command id="org.eclipse.ponyatov.MakeBuilder.del" name="Remove Makefile builder"/> 
+   </extension-->
    
    <extension point="org.eclipse.ui.newWizards">
    		<category id="org.eclipse.ponyatov.new" name="_Ponyatov"/>
