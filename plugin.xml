@@ -12,6 +12,18 @@
       </perspective>
    </extension>
    
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+   		<perspectiveExtension targetID="org.eclipse.ponyatov.perspective">
+   			<!--hiddenMenuItem id="org.eclipse.ui.run"/-->
+   			<hiddenMenuItem id="org.eclipse.help.menu"/>
+   			<hiddenMenuItem id="org.eclipse.search.menu"/>
+   		</perspectiveExtension>
+   		<!--view id="org.eclipse.jdt.ui.PackageExplorer"
+   			relative="org.eclipse.ui.editorss"
+   			relationship="left"
+   			ratio="0.3"/-->
+   </extension>
+   
    <extension
    		point="org.eclipse.core.resources.natures"
    		id="org.eclipse.ponyatov.makenature"
@@ -32,5 +44,19 @@
    			<run class="org.eclipse.ponyatov.MakeBuilder"/>
    		</builder>
    </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">
+   		<category id="org.eclipse.ponyatov.new" name="_Ponyatov"/>
+   		<primaryWizard id="org.eclipse.ponyatov.newmake"/>
+   		<wizard
+   			id="org.eclipse.ponyatov.newmake"
+   			name="Makefile project"
+   			category="org.eclipse.ponyatov.new"
+   			class="org.eclipse.ponyatov.New"
+   		>
+   		<description>Generic Makefile based project with Git repository</description>
+   		</wizard>
+   </extension>
+   
 
 </plugin>
