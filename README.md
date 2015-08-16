@@ -1,6 +1,13 @@
 # org.eclipse.ponyatov
 ## Custom Eclipse for my programming games
 
+### components:
+
+* 'Ponyatov' perspective (personal adapted workspace layout)
+* Makefile nature
+* Makefile builder
+* New wizards set & New Makefile Project
+
 ### required:
 
 * Eclipse PDE
